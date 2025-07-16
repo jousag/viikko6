@@ -54,7 +54,7 @@ public class App
                         default:
                             break;
                     }
-                    System.out.println("Soitin lisätty listaan.");
+                    System.out.println("Soitin lisätty listaan!");
                     break;
                 case 2:
                     for (Instrument instrument : instruments) {
