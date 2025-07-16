@@ -50,9 +50,15 @@ public class App
                             System.out.println("Virheellinen soitinvalinta.");
                             break;
                         }
+                    break;
                 case 2:
-                    for (Instrument instrument : instruments) {
-                        System.out.println(instrument.getDetails());
+                    if (instruments.isEmpty()) {
+                        System.out.println("Ei lisättyjä soittimia.");
+                        break;
+                    }else {
+                        for (Instrument instrument : instruments) {
+                            System.out.println(instrument.getDetails());
+                        }
                     }
                     break;
                 case 3:
