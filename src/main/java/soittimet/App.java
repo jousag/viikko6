@@ -26,37 +26,30 @@ public class App
                 case 1:
                     System.out.println("Minkä soittimen haluat lisätä? 1) Kitara, 2) Viulu, 3) Rummut");
                     int instrumentChoice = sc.nextInt();
+                    System.out.println("Anna valmistajan nimi: ");
+                    String manufacturer = sc.next();
+                    System.out.println("Anna hinta euroina: ");
+                    int price = sc.nextInt();
                     switch (instrumentChoice) {
                         case 1:
-                            System.out.println("Anna valmistajan nimi: ");
-                            String guitarManufacturer = sc.next();
-                            System.out.println("Anna hinta euroina: ");
-                            int guitarPrice = sc.nextInt();
-                            Guitar guitar = new Guitar(guitarManufacturer, guitarPrice);
+                            Guitar guitar = new Guitar(manufacturer, price);
                             instruments.add(guitar);
+                            System.out.println("Soitin lisätty listaan!");
                             break;
                         case 2:
-                            System.out.println("Anna valmistajan nimi: ");
-                            String violinManufacturer = sc.next();
-                            System.out.println("Anna hinta euroina: ");
-                            int violinPrice = sc.nextInt();
-                            Violin violin = new Violin(violinManufacturer, violinPrice);
+                            Violin violin = new Violin(manufacturer, price);
                             instruments.add(violin);
+                            System.out.println("Soitin lisätty listaan!");
                             break;
                         case 3:
-                            System.out.println("Anna valmistajan nimi: ");
-                            String drumManufacturer = sc.next();
-                            System.out.println("Anna hinta euroina: ");
-                            int drumPrice = sc.nextInt();
-                            Drum drum = new Drum(drumManufacturer, drumPrice);
+                            Drum drum = new Drum(manufacturer, price);
                             instruments.add(drum);
+                            System.out.println("Soitin lisätty listaan!");
                             break;
                         default:
                             System.out.println("Virheellinen soitinvalinta.");
                             break;
-                    }
-                    System.out.println("Soitin lisätty listaan!");
-                    break;
+                        }
                 case 2:
                     for (Instrument instrument : instruments) {
                         System.out.println(instrument.getDetails());
