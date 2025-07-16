@@ -52,6 +52,7 @@ public class App
                             instruments.add(drum);
                             break;
                         default:
+                            System.out.println("Virheellinen soitinvalinta.");
                             break;
                     }
                     System.out.println("Soitin lisätty listaan!");
@@ -78,6 +79,7 @@ public class App
                 case 0:
                     System.out.println("Kiitos ohjelman käytöstä.");
                     exit = true;
+                    break;
                 default:
                     System.out.println("Virheellinen valinta.");
             }
